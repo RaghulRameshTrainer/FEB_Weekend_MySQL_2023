@@ -1,0 +1,1224 @@
+CREATE TABLE employee(  
+        emp_id  INTEGER,  
+        emp_name VARCHAR2(100),  
+        age INTEGER,  
+        salary INTEGER,  
+        city VARCHAR2(20)  
+);
+
+INSERT INTO employee VALUES(1,'Satya',25,50000,'Bangalore');
+
+INSERT INTO employee VALUES(2,'Raja',35,60000,'Chennai');
+
+INSERT INTO employee VALUES(3,'Anand',30,55000,'Hyderabad');
+
+INSERT INTO employee VALUES(4,'Siva',45,70000,'Pune');
+
+INSERT INTO employee VALUES(5,'Ramya',27,33000,'Gurgaon');
+
+SELECT * FROM employee;
+
+CREATE OR REPLACE FUNCTION salary_revision(sal INTEGER) 
+RETURN INTEGER IS 
+	new_sal INTEGER; 
+BEGIN 
+	new_sal := sal*1.1; 
+	RETURN new_sal; 
+END; 
+/
+
+SELECT emp_id, emp_name, age, salary, city FROM employee;
+
+SELECT emp_id, emp_name, age, salary,salary_revision(salary) AS new_salary  city FROM employee;
+
+SELECT emp_id, emp_name, age, salary,salary_revision(salary) AS new_salary , city FROM employee;
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || e_name || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+    END LOOP; 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || e_name || 'Emp Age: '|| e_age || 'Emp_Salary: '|| e_salary || 'Emp City: '|| e_city); 
+    END LOOP; 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || e_name || '	Emp Age: '|| e_age || '	   Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+    END LOOP; 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || e_name || '	Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+    END LOOP; 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || e_name || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+    END LOOP; 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+    END LOOP; 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	dmbs_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+    END LOOP; 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+    END LOOP; 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+    END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	-- dbms_output.put_line(emp_data%ISOPEN); 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	-- LOOP 
+	-- 	FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+	-- 		EXIT WHEN emp_data%notfound; 
+	-- 	dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+ --    END LOOP; 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+    END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+    END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	dbms_output.put_line('Does cursor available in open state : '|| emp_data%ISOPEN); 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+    END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	dbms_output.put_line(emp_data%ISOPEN); 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+    END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	-- dbms_output.put_line(emp_data%ISOPEN); 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+    END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	dbms_output.put_line(emp_data%ISOPEN); 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+		dbms_output.put_line(emp_data%ISOPEN); 
+    END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+	END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	-- dbms_output.put_line(emp_data%ISOPEN); 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+	END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	dbms_output.put_line(emp_data%ISOPEN); 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+	END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	-- dbms_output.put_line(emp_data%ISOPEN); 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+	END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	-- dbms_output.put_line(emp_data%ISOPEN); 
+	CLOSE emp_data; 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+	END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	 
+	CLOSE emp_data; 
+	dbms_output.put_line(emp_data%ISOPEN); 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+	END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	 
+	CLOSE emp_data; 
+	dbms_output.put_line('-->' ||emp_data%isopen); 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+	END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	 
+	CLOSE emp_data; 
+	dbms_output.put_line('-->' ||emp_data%isopen); 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+	END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	 
+	CLOSE emp_data; 
+	dbms_output.put_line('-->' ||emp_data%isopen); 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+	END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	 
+	CLOSE emp_data; 
+	dbms_output.put_line('-->' ||emp_data%isopen); 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+	END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	 
+	CLOSE emp_data; 
+	dbms_output.put_line('-->' ||emp_data%isopen); 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+	END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	 
+	CLOSE emp_data; 
+	dbms_output.put_line('-->' ||emp_data%isopen); 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+	END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	 
+	CLOSE emp_data; 
+	dbms_output.put_line('-->' ||emp_data%isopen); 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+	END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+		dbms_output.put_line('-->' ||emp_data%isopen); 
+ 
+	CLOSE emp_data; 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+	END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	 
+	CLOSE emp_data; 
+	dbms_output.put_line('-->' ||emp_data%isopen); 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+	END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	 
+	CLOSE emp_data; 
+	dbms_output.put_line('-->' ||emp_data%isopen); 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+	END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+	 
+	CLOSE emp_data; 
+	dbms_output.put_line('-->' ||emp_data%isopen); 
+END; 
+/
+
+CREATE TABLE employee(  
+        emp_id  INTEGER,  
+        emp_name VARCHAR2(100),  
+        age INTEGER,  
+        salary INTEGER,  
+        city VARCHAR2(20)  
+);
+
+INSERT INTO employee VALUES(1,'Satya',25,50000,'Bangalore');
+
+INSERT INTO employee VALUES(2,'Raja',35,60000,'Chennai');
+
+INSERT INTO employee VALUES(3,'Anand',30,55000,'Hyderabad');
+
+INSERT INTO employee VALUES(4,'Siva',45,70000,'Pune');
+
+INSERT INTO employee VALUES(5,'Ramya',27,33000,'Gurgaon');
+
+SELECT * FROM employee;
+
+CREATE OR REPLACE FUNCTION salary_revision(sal INTEGER) 
+RETURN INTEGER IS 
+	new_sal INTEGER; 
+BEGIN 
+	new_sal := sal*1.1; 
+	RETURN new_sal; 
+END; 
+/
+
+SELECT emp_id, emp_name, age, salary,salary_revision(salary) AS new_salary , city FROM employee;
+
+Implicit cursors 
+
+
+Explicit Cursors 
+
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+	END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+		dbms_output.put_line('-->' ||emp_data%isopen); 
+ 
+	CLOSE emp_data; 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+	END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+		dbms_output.put_line('-->' ||emp_data%isopen); 
+ 
+	CLOSE emp_data; 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+	END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+		dbms_output.put_line('-->' ||emp_data%isopen); 
+ 
+	CLOSE emp_data; 
+END; 
+/
+
+DECLARE 
+	e_name employee.emp_name%type; 
+	e_age employee.age%type; 
+	e_salary employee.salary%type; 
+	e_city employee.city%type; 
+	CURSOR emp_data IS 
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000; 
+BEGIN 
+    OPEN emp_data; 
+	LOOP 
+		FETCH emp_data INTO e_name, e_age, e_salary, e_city ; 
+			EXIT WHEN emp_data%notfound; 
+		dbms_output.put_line('Emp Name: ' || upper(e_name) || '	 Emp Age: '|| e_age || '	 Emp_Salary: '|| e_salary || '	Emp City: '|| e_city); 
+	END LOOP; 
+	dbms_output.put_line('Total number of records : '|| emp_data%ROWCOUNT); 
+		dbms_output.put_line('-->' ||emp_data%isopen); 
+ 
+	CLOSE emp_data; 
+END; 
+/
+
+        SELECT emp_name,age,salary,city FROM employee WHERE salary>50000;
+
+DECLARE 
+    e_id employee.emp_id%type := 5; 
+	e_name employee.emp_name%type; 
+BEGIN 
+	SELECT DISTINCT emp_name INTO e_name FROM employee WHERE emp_id := e_id; 
+	dbms_output.put_line('EMP NAME IS :'|| e_name); 
+END;
+/
+
+DECLARE 
+    e_id employee.emp_id%type := 5; 
+	e_name employee.emp_name%type; 
+BEGIN 
+	SELECT DISTINCT emp_name INTO e_name FROM employee WHERE emp_id := e_id; 
+	dbms_output.put_line('EMP NAME IS :'|| e_name); 
+END; 
+/
+
+DECLARE 
+    e_id employee.emp_id%type := 5; 
+	e_name employee.emp_name%type; 
+BEGIN 
+	SELECT DISTINCT emp_name INTO e_name FROM employee WHERE emp_id = e_id; 
+	dbms_output.put_line('EMP NAME IS :'|| e_name); 
+END; 
+/
+
+DECLARE 
+    e_id employee.emp_id%type := 10; 
+	e_name employee.emp_name%type; 
+BEGIN 
+	SELECT DISTINCT emp_name INTO e_name FROM employee WHERE emp_id = e_id; 
+	dbms_output.put_line('EMP NAME IS :'|| e_name); 
+ 
+	EXCEPTION 
+        WHEN no_data_found THEN 
+        	dbms_output.put_line('No records for emp id :' || e_id); 
+END; 
+/
+
+DECLARE 
+    e_id employee.emp_id%type := 10; 
+	e_name employee.emp_name%type; 
+BEGIN 
+	SELECT DISTINCT emp_name INTO e_name FROM employee WHERE emp_id = e_id; 
+	dbms_output.put_line('EMP NAME IS :'|| e_name); 
+END; 
+/
+
+DECLARE 
+    e_id employee.emp_id%type := 10; 
+	e_name employee.emp_name%type; 
+BEGIN 
+	SELECT DISTINCT emp_name INTO e_name FROM employee WHERE emp_id = e_id; 
+	dbms_output.put_line('EMP NAME IS :'|| e_name); 
+ 
+	EXCEPTION 
+        WHEN no_data_found THEN 
+        	dbms_output.put_line('No records for emp id :' || e_id); 
+END; 
+/
+
+DECLARE 
+    e_id employee.emp_id%type := 1; 
+	e_name employee.emp_name%type; 
+BEGIN 
+	SELECT DISTINCT emp_name INTO e_name FROM employee WHERE emp_id = e_id; 
+	dbms_output.put_line('EMP NAME IS :'|| e_name); 
+ 
+	EXCEPTION 
+        WHEN no_data_found THEN 
+        	dbms_output.put_line('No records for emp id :' || e_id); 
+END; 
+/
+
+DECLARE 
+    e_id employee.emp_id%type := 1; 
+	e_name employee.emp_name%type; 
+BEGIN 
+	SELECT DISTINCT emp_name INTO e_name FROM employee WHERE emp_id = e_id; 
+	dbms_output.put_line('EMP NAME IS :'|| e_name); 
+ 
+	EXCEPTION 
+        WHEN no_data_found THEN 
+        	dbms_output.put_line('No records for emp id :' || e_id); 
+		WHEN others THEN 
+			dbms_output.put_line('New exception') 
+END; 
+/
+
+DECLARE 
+    e_id employee.emp_id%type := 1; 
+	e_name employee.emp_name%type; 
+BEGIN 
+	SELECT DISTINCT emp_name INTO e_name FROM employee WHERE emp_id = e_id; 
+	dbms_output.put_line('EMP NAME IS :'|| e_name); 
+ 
+	EXCEPTION 
+        WHEN no_data_found THEN 
+        	dbms_output.put_line('No records for emp id :' || e_id); 
+		WHEN others THEN 
+			dbms_output.put_line('New exception'); 
+END; 
+/
+
+DECLARE 
+    e_id employee.emp_id%type := 11; 
+	e_name employee.emp_name%type; 
+BEGIN 
+	SELECT DISTINCT emp_name INTO e_name FROM employee WHERE emp_id = e_id; 
+	dbms_output.put_line('EMP NAME IS :'|| e_name); 
+ 
+	EXCEPTION 
+        WHEN no_data_found THEN 
+        	dbms_output.put_line('No records for emp id :' || e_id); 
+		WHEN others THEN 
+			dbms_output.put_line('New exception'); 
+END; 
+/
+
+DECLARE 
+    e_id employee.emp_id%type := 'ten'; 
+	e_name employee.emp_name%type; 
+BEGIN 
+	SELECT DISTINCT emp_name INTO e_name FROM employee WHERE emp_id = e_id; 
+	dbms_output.put_line('EMP NAME IS :'|| e_name); 
+ 
+	EXCEPTION 
+        WHEN no_data_found THEN 
+        	dbms_output.put_line('No records for emp id :' || e_id); 
+		WHEN others THEN 
+			dbms_output.put_line('New exception'); 
+END; 
+/
+
+DECLARE 
+    e_id employee.emp_id%type := 3; 
+	e_name employee.emp_name%type; 
+BEGIN 
+	SELECT DISTINCT emp_name INTO e_name FROM employee WHERE emp_id = e_id; 
+	dbms_output.put_line('EMP NAME IS :'|| e_name); 
+ 
+	EXCEPTION 
+        WHEN no_data_found THEN 
+        	dbms_output.put_line('No records for emp id :' || e_id); 
+		WHEN others THEN 
+			dbms_output.put_line('New exception'); 
+END; 
+/
+
+DECLARE 
+    e_id employee.emp_id%type := 3; 
+	e_name employee.emp_name%type; 
+	invalid_emp_id EXCEPTION; 
+BEGIN 
+    IF e_id <= 0 THEN 
+    	RAISE invalid_emp_id; 
+	SELECT DISTINCT emp_name INTO e_name FROM employee WHERE emp_id = e_id; 
+	dbms_output.put_line('EMP NAME IS :'|| e_name); 
+ 
+	EXCEPTION 
+        WHEN no_data_found THEN 
+        	dbms_output.put_line('No records for emp id :' || e_id); 
+		WHEN others THEN 
+			dbms_output.put_line('New exception'); 
+END; 
+/
+
+DECLARE 
+    e_id employee.emp_id%type := 3; 
+	e_name employee.emp_name%type; 
+	invalid_emp_id EXCEPTION; 
+BEGIN 
+    IF e_id <= 0 THEN 
+    	RAISE invalid_emp_id; 
+	END IF; 
+	SELECT DISTINCT emp_name INTO e_name FROM employee WHERE emp_id = e_id; 
+	dbms_output.put_line('EMP NAME IS :'|| e_name); 
+ 
+	EXCEPTION 
+        WHEN no_data_found THEN 
+        	dbms_output.put_line('No records for emp id :' || e_id); 
+		WHEN others THEN 
+			dbms_output.put_line('New exception'); 
+END; 
+/
+
+DECLARE 
+    e_id employee.emp_id%type := -3; 
+	e_name employee.emp_name%type; 
+	invalid_emp_id EXCEPTION; 
+BEGIN 
+    IF e_id <= 0 THEN 
+    	RAISE invalid_emp_id; 
+	END IF; 
+	SELECT DISTINCT emp_name INTO e_name FROM employee WHERE emp_id = e_id; 
+	dbms_output.put_line('EMP NAME IS :'|| e_name); 
+ 
+	EXCEPTION 
+        WHEN no_data_found THEN 
+        	dbms_output.put_line('No records for emp id :' || e_id); 
+		WHEN others THEN 
+			dbms_output.put_line('New exception'); 
+END; 
+/
+
+DECLARE 
+    e_id employee.emp_id%type := -3; 
+	e_name employee.emp_name%type; 
+	invalid_emp_id EXCEPTION; 
+BEGIN 
+    IF e_id <= 0 THEN 
+    	RAISE invalid_emp_id; 
+	END IF; 
+	SELECT DISTINCT emp_name INTO e_name FROM employee WHERE emp_id = e_id; 
+	dbms_output.put_line('EMP NAME IS :'|| e_name); 
+ 
+	EXCEPTION 
+        WHEN no_data_found THEN 
+        	dbms_output.put_line('No records for emp id :' || e_id); 
+		WHEN invalid_emp_id THEN 
+            dbms_output.put_line('Emp ID must be either 1 or above 1'); 
+		WHEN others THEN 
+			dbms_output.put_line('New exception'); 
+END; 
+/
+
+DECLARE 
+    e_id employee.emp_id%type := 2; 
+	e_name employee.emp_name%type; 
+	invalid_emp_id EXCEPTION; 
+BEGIN 
+    IF e_id <= 0 THEN 
+    	RAISE invalid_emp_id; 
+	END IF; 
+	SELECT DISTINCT emp_name INTO e_name FROM employee WHERE emp_id = e_id; 
+	dbms_output.put_line('EMP NAME IS :'|| e_name); 
+ 
+	EXCEPTION 
+        WHEN no_data_found THEN 
+        	dbms_output.put_line('No records for emp id :' || e_id); 
+		WHEN invalid_emp_id THEN 
+            dbms_output.put_line('Emp ID must be either 1 or above 1'); 
+		WHEN others THEN 
+			dbms_output.put_line('New exception'); 
+END; 
+/
+
+CREATE TABLE alumni(  
+        emp_id  INTEGER,  
+        emp_name VARCHAR2(100),  
+        age INTEGER,  
+        salary INTEGER,  
+        city VARCHAR2(20)  
+);
+
+TRUNCATE employee
+
+
+TRUNCATE table employee
+
+
+INSERT INTO employee VALUES(1,'Satya',25,50000,'Bangalore');
+
+INSERT INTO employee VALUES(2,'Raja',35,60000,'Chennai');
+
+INSERT INTO employee VALUES(3,'Anand',30,55000,'Hyderabad');
+
+INSERT INTO employee VALUES(4,'Siva',45,70000,'Pune');
+
+INSERT INTO employee VALUES(5,'Ramya',27,33000,'Gurgaon');
+
+SELECT * FROM employee;
+
+CREATE TABLE alumni(  
+        emp_id  INTEGER,  
+        emp_name VARCHAR2(100),  
+        age INTEGER,  
+        salary INTEGER,  
+        city VARCHAR2(20)  
+);
+
+CREATE OR REPLACE TRIGGER load_alumni_data 
+BEFORE DELETE ON employee 
+FOR EACH ROW 
+BEGIN 
+	INSERT INTO alumni VALUES(:OLD.emp_id, :OLD.emp_name,:OLD.age,:OLD.salary,:OLD.city); 
+	dbms_output.put_line(emp_id || ' data loaded into alumni table'); 
+END; 
+/
+
+CREATE OR REPLACE TRIGGER load_alumni_data 
+BEFORE DELETE ON employee 
+FOR EACH ROW 
+BEGIN 
+	INSERT INTO alumni VALUES(:OLD.emp_id, :OLD.emp_name,:OLD:age,:OLD.salary,:OLD.city); 
+	dbms_output.put_line(emp_id || ' data loaded into alumni table'); 
+END; 
+/
+
+SELECT * FROM employee;
+
+SELECT * FROM alumni;
+
+DELETE FROM employee WHERE id=3;
+
+DELETE FROM employee WHERE emp_id=3;
+
+CREATE OR REPLACE TRIGGER load_alumni_data 
+BEFORE DELETE ON employee 
+FOR EACH ROW 
+BEGIN 
+	INSERT INTO alumni VALUES(:OLD.emp_id, :OLD.emp_name,:OLD.age,:OLD.salary,:OLD.city); 
+	dbms_output.put_line(:OLD.emp_id || ' data loaded into alumni table'); 
+END; 
+/
+
+DELETE FROM employee WHERE emp_id=3;
+
+SELECT * FROM employee;
+
+SELECT * FROM alumni;
+
+DELETE FROM employee WHERE emp_id>3;
+
+SELECT * FROM alumni;
+
+SELECT * FROM employee;
+
+CREATE TABLE orders_weekday_table( 
+    ord_id INTEGER, 
+    prod_name VARCHAR2(100), 
+    amount INTEGER, 
+    day_or_order VARCHAR2(10) 
+);
+
+CREATE TABLE orders_weekend_table( 
+    ord_id INTEGER, 
+    prod_name VARCHAR2(100), 
+    amount INTEGER, 
+    day_or_order VARCHAR2(10) 
+);
+
+CREATE TABLE orders( 
+    ord_id INTEGER, 
+    prod_name VARCHAR2(100), 
+    amount INTEGER, 
+    day_or_order VARCHAR2(10) 
+);
+
+CREATE OR REPLACE TRIGGER load_order_detils 
+INSTEAD OF INSERT ON orders 
+FOR EACH ROW 
+BEGIN 
+	IF day_or_order = 'Saturday' or day_or_order = 'Sunday' THEN 
+    	INSERT INTO orders_weekend_table VALUES(:NEW.ord_id, :NEW.prod_name,:NEW.amount,:NEW.day_or_order); 
+	ELSE 
+        INSERT INTO orders_weekday_table VALUES(:NEW.ord_id, :NEW.prod_name,:NEW.amount,:NEW.day_or_order); 
+END; 
+/
+
+CREATE OR REPLACE TRIGGER load_order_detils 
+INSTEAD OF  
+    INSERT  
+    ON orders 
+FOR EACH ROW 
+BEGIN 
+	IF day_or_order = 'Saturday' or day_or_order = 'Sunday' THEN 
+    	INSERT INTO orders_weekend_table VALUES(:NEW.ord_id, :NEW.prod_name,:NEW.amount,:NEW.day_or_order); 
+	ELSE 
+        INSERT INTO orders_weekday_table VALUES(:NEW.ord_id, :NEW.prod_name,:NEW.amount,:NEW.day_or_order); 
+END; 
+/
+
+CREATE OR REPLACE TRIGGER load_order_detils 
+INSTEAD OF  
+    {INSERT} 
+    ON orders 
+FOR EACH ROW 
+BEGIN 
+	IF day_or_order = 'Saturday' or day_or_order = 'Sunday' THEN 
+    	INSERT INTO orders_weekend_table VALUES(:NEW.ord_id, :NEW.prod_name,:NEW.amount,:NEW.day_or_order); 
+	ELSE 
+        INSERT INTO orders_weekday_table VALUES(:NEW.ord_id, :NEW.prod_name,:NEW.amount,:NEW.day_or_order); 
+END; 
+/
+
+CREATE OR REPLACE TRIGGER load_order_detils 
+{INSTEAD OF} 
+    {INSERT} 
+    ON orders 
+FOR EACH ROW 
+BEGIN 
+	IF day_or_order = 'Saturday' or day_or_order = 'Sunday' THEN 
+    	INSERT INTO orders_weekend_table VALUES(:NEW.ord_id, :NEW.prod_name,:NEW.amount,:NEW.day_or_order); 
+	ELSE 
+        INSERT INTO orders_weekday_table VALUES(:NEW.ord_id, :NEW.prod_name,:NEW.amount,:NEW.day_or_order); 
+END; 
+/
+
+CREATE TRIGGER load_order_detils 
+INSTEAD OF   {INSERT}   ON orders 
+FOR EACH ROW 
+BEGIN 
+	IF day_or_order = 'Saturday' or day_or_order = 'Sunday' THEN 
+    	INSERT INTO orders_weekend_table VALUES(:NEW.ord_id, :NEW.prod_name,:NEW.amount,:NEW.day_or_order); 
+	ELSE 
+        INSERT INTO orders_weekday_table VALUES(:NEW.ord_id, :NEW.prod_name,:NEW.amount,:NEW.day_or_order); 
+END; 
+/
+
+CREATE TRIGGER load_order_detils 
+INSTEAD OF   {INSERT}   ON orders 
+FOR EACH ROW 
+BEGIN 
+	IF (day_or_order = 'Saturday' or day_or_order = 'Sunday') THEN 
+    	INSERT INTO orders_weekend_table VALUES(:NEW.ord_id, :NEW.prod_name,:NEW.amount,:NEW.day_or_order); 
+	ELSE 
+        INSERT INTO orders_weekday_table VALUES(:NEW.ord_id, :NEW.prod_name,:NEW.amount,:NEW.day_or_order); 
+END; 
+/
+
+CREATE TRIGGER load_detils 
+INSTEAD OF INSERT ON orders 
+FOR EACH ROW 
+BEGIN 
+	IF (day_or_order = 'Saturday' or day_or_order = 'Sunday') THEN 
+    	INSERT INTO orders_weekend_table(ord_id, prod_name, amount,day_or_order) VALUES(:NEW.ord_id, :NEW.prod_name,:NEW.amount,:NEW.day_or_order); 
+	ELSE 
+        INSERT INTO orders_weekday_table(ord_id, prod_name, amount,day_or_order) VALUES(:NEW.ord_id, :NEW.prod_name,:NEW.amount,:NEW.day_or_order); 
+END; 
+/
+
+INSERT INTO employee VALUES(1,'Satya',25,50000,'Bangalore');
+
+INSERT INTO employee VALUES(2,'Raja',35,60000,'Chennai');
+
+INSERT INTO employee VALUES(3,'Anand',30,55000,'Hyderabad');
+
+INSERT INTO employee VALUES(4,'Siva',45,70000,'Pune');
+
+INSERT INTO employee VALUES(5,'Ramya',27,33000,'Gurgaon');
+
+SELECT * FROM employee;
+
+SELECT * FROM EMPLOYEE WHERE row_number > 1;
+
