@@ -1,0 +1,985 @@
+
+
+DECLARE 
+	name varchar2(10) := "ExcelR"; 
+BEGIN 
+   DBMS_OUTPUT.PUT_LINE('The company name is: '|| name) 
+END; 
+/
+
+DECLARE 
+	name varchar2(10) := "ExcelR"; 
+BEGIN 
+   DBMS_OUTPUT.PUT_LINE('The company name is: '|| name); 
+END; 
+/
+
+DECLARE 
+	name varchar2(10) := 'ExcelR'; 
+BEGIN 
+   DBMS_OUTPUT.PUT_LINE('The company name is: '|| name); 
+END; 
+/
+
+DECLARE 
+	name varchar2(10) := 'ExcelR'; 
+BEGIN 
+   dbms_output.put_line('The company name is: '|| name); 
+END; 
+/
+
+DECLARE 
+	name varchar2(10) := 'ExcelR...'; 
+BEGIN 
+   dbms_output.put_line('The company name is: '|| name); 
+END; 
+/
+
+DECLARE 
+	-- name varchar2(10) := 'ExcelR...'; 
+BEGIN 
+   name varchar2(10) := 'ExcelR...'; 
+   dbms_output.put_line('The company name is: '|| name); 
+END; 
+/
+
+DECLARE 
+	-- name varchar2(10) := 'ExcelR...'; 
+BEGIN 
+    
+   dbms_output.put_line('The company name is: '|| name); 
+END; 
+/
+
+DECLARE 
+	name varchar2(10) := 'ExcelR...'; 
+BEGIN  
+    dbms_output.put_line('The company name is: '|| name); 
+END; 
+/
+
+DECLARE 
+	name varchar2(10) := 'ExcelR...'; 
+	MySQL_duration integer; 
+BEGIN 
+    MySQL_duration := 28; 
+    dbms_output.put_line('The company name is: '|| name); 
+	DBMS_OUTPUT.PUT_LINE('My SQL training duration is : ' || MySQL_duration || ' hours.' ); 
+END; 
+/
+
+DECLARE 
+	name varchar2(10) := 'ExcelR...'; 
+	MySQL_duration integer := 30; 
+BEGIN 
+    -- MySQL_duration := 28; 
+    dbms_output.put_line('The company name is: '|| name); 
+	DBMS_OUTPUT.PUT_LINE('My SQL training duration is : ' || MySQL_duration || ' hours.' ); 
+END; 
+/
+
+DECLARE 
+	name varchar2(10) := 'ExcelR...';  
+	MySQL_duration number := 30; 
+BEGIN 
+    -- MySQL_duration := 28; 
+    dbms_output.put_line('The company nameis: '|| name); 
+	DBMS_OUTPUT.PUT_LINE('My SQL training duration is : ' || MySQL_duration || ' hours.' ); 
+END; 
+/
+
+DECLARE 
+	name varchar2(10) := 'ExcelR...';  
+	MySQL_duration number := 30; 
+BEGIN 
+    -- MySQL_duration := 28; 
+    dbms_output.put_line('The company name is: '|| name); 
+	DBMS_OUTPUT.PUT_LINE('My SQL training duration is : ' || MySQL_duration || ' hours.' ); 
+END; 
+/
+
+DECLARE 
+	name varchar2(10) := 'ExcelR...';  
+	MySQL_duration number := 30; 
+BEGIN 
+    -- MySQL_duration := 28; 
+    dbms_output.put_line('The company name is: '|| name); 
+	DBMS_OUTPUT.PUT_LINE('My SQL training duration is : ' || MySQL_duration || ' hours.' ); 
+	dbms_output.put_line("i\'m Santosh"); 
+END; 
+/
+
+DECLARE 
+	name varchar2(10) := 'ExcelR...';  
+	MySQL_duration number := 30; 
+BEGIN 
+    -- MySQL_duration := 28; 
+    dbms_output.put_line('The company name is: '|| name); 
+	DBMS_OUTPUT.PUT_LINE('My SQL training duration is : ' || MySQL_duration || ' hours.' ); 
+	dbms_output.put_line('''i\'m Santosh'''); 
+END; 
+/
+
+DECLARE 
+	name varchar2(10) := 'ExcelR...';  
+	MySQL_duration number := 30; 
+BEGIN 
+    -- MySQL_duration := 28; 
+    dbms_output.put_line('The company name is: '|| name); 
+	DBMS_OUTPUT.PUT_LINE('My SQL training duration is : ' || MySQL_duration || ' hours.' ); 
+	dbms_output.put_line('i''m Santosh'); 
+END; 
+/
+
+DECLARE 
+	x integer := 100; 
+BEGIN 
+	IF(x<100) THEN 
+    	dbms_output.put_line("X is a small value : " || x); 
+	ELSE 
+        dbms_output.put_line("X is not a small value : " || x); 
+	END IF; 
+END; 
+/
+
+DECLARE 
+	x integer := 100; 
+BEGIN 
+	IF(x<100) THEN 
+    	dbms_output.put_line('X is a small value : ' || x); 
+	ELSE 
+        dbms_output.put_line('X is not a small value : ' || x); 
+	END IF; 
+END; 
+/
+
+DECLARE 
+	x integer := 10; 
+BEGIN 
+	IF(x<100) THEN 
+    	dbms_output.put_line('X is a small value : ' || x); 
+	ELSE 
+        dbms_output.put_line('X is not a small value : ' || x); 
+	END IF; 
+END; 
+/
+
+DECLARE 
+	x integer := 10; 
+BEGIN 
+	IF(x>=0 and x<10) THEN 
+    	dbms_output.put_line('X has a single digit value : ' || x); 
+	ELSIF(x>=10 and x<=99) THEN 
+        dbms_output.put_line('X has a two digit value : ' || x); 
+	ELSE 
+        dbms_output.put_line('X has big value : ' || x); 
+	END IF; 
+END; 
+/
+
+DECLARE 
+	x integer := 1; 
+BEGIN 
+	IF(x>=0 and x<10) THEN 
+    	dbms_output.put_line('X has a single digit value : ' || x); 
+	ELSIF(x>=10 and x<=99) THEN 
+        dbms_output.put_line('X has a two digit value : ' || x); 
+	ELSE 
+        dbms_output.put_line('X has big value : ' || x); 
+	END IF; 
+END; 
+/
+
+DECLARE 
+	x integer := 100; 
+BEGIN 
+	IF(x>=0 and x<10) THEN 
+    	dbms_output.put_line('X has a single digit value : ' || x); 
+	ELSIF(x>=10 and x<=99) THEN 
+        dbms_output.put_line('X has a two digit value : ' || x); 
+	ELSE 
+        dbms_output.put_line('X has big value : ' || x); 
+	END IF; 
+END; 
+/
+
+DECLARE 
+	x integer := -5; 
+BEGIN 
+	IF(x>=0 and x<10) THEN 
+    	dbms_output.put_line('X has a single digit value : ' || x); 
+	ELSIF(x>=10 and x<=99) THEN 
+        dbms_output.put_line('X has a two digit value : ' || x); 
+	ELSIF(x<0) THEN 
+		dbms_output.put_line('X is stored with negative value : ' || x); 
+	ELSE 
+        dbms_output.put_line('X has big value : ' || x); 
+	END IF; 
+END; 
+/
+
+DECLARE 
+	x integer := 555; 
+BEGIN 
+	IF(x BETWEEN 0 and 9) THEN 
+    	dbms_output.put_line('X has a single digit value : ' || x); 
+	ELSIF(x BETWEEN 0 and 99) THEN 
+        dbms_output.put_line('X has a two digit value : ' || x); 
+	ELSIF(x<0) THEN 
+		dbms_output.put_line('X is stored with negative value : ' || x); 
+	ELSE 
+        dbms_output.put_line('X has big value : ' || x); 
+	END IF; 
+END; 
+/
+
+DECLARE 
+	x integer := 95; 
+BEGIN 
+	IF(x BETWEEN 0 and 9) THEN 
+    	dbms_output.put_line('X has a single digit value : ' || x); 
+	ELSIF(x BETWEEN 0 and 99) THEN 
+        dbms_output.put_line('X has a two digit value : ' || x); 
+	ELSIF(x<0) THEN 
+		dbms_output.put_line('X is stored with negative value : ' || x); 
+	ELSE 
+        dbms_output.put_line('X has big value : ' || x); 
+	END IF; 
+END; 
+/
+
+DECLARE 
+	x integer := 95; 
+BEGIN 
+	IF(x BETWEEN 0 and 9) THEN 
+    	dbms_output.put_line('X has a single digit value : ' || x); 
+	ELSIF(x BETWEEN 10 and 99) THEN 
+        dbms_output.put_line('X has a two digit value : ' || x); 
+	ELSIF(x<0) THEN 
+		dbms_output.put_line('X is stored with negative value : ' || x); 
+	ELSE 
+        dbms_output.put_line('X has big value : ' || x); 
+	END IF; 
+END; 
+/
+
+DECLARE 
+	x integer := 0; 
+BEGIN 
+	LOOP 
+	    dbms_output.put_line(x); 
+		x := x + 1; 
+		IF x>10 THEN 
+            exit; 
+		END IF; 
+    END LOOP; 
+END; 
+/
+
+DECLARE 
+	x integer := 0; 
+BEGIN 
+	LOOP 
+	    dbms_output.put_line(x); 
+		x := x + 1; 
+		IF x>10 THEN 
+            exit; 
+		END IF; 
+    END LOOP; 
+	dbms_output.put_line('THE VALUE OF X IS : ', x); 
+END; 
+/
+
+DECLARE 
+	x integer := 0; 
+BEGIN 
+	LOOP 
+	    dbms_output.put_line(x); 
+		x := x + 1; 
+		IF x>10 THEN 
+            exit; 
+		END IF; 
+    END LOOP; 
+	dbms_output.put_line('THE VALUE OF X IS : '|| x); 
+END; 
+/
+
+DECLARE 
+	x integer := 10; 
+BEGIN 
+	WHILE x > 0 LOOP 
+    	dbms_output.put_line(x); 
+		x := x - 1; 
+	END LOOP; 
+END; 
+/
+
+DECLARE 
+	x integer := 10; 
+BEGIN 
+	WHILE x > 0 LOOP 
+    	dbms_output.put_line('Value of x: '||x); 
+		x := x - 1; 
+	END LOOP; 
+END; 
+/
+
+declare 
+    x integer := 10; 
+begin 
+    while x>0 loop 
+		DBMS_OUTPUT.PUT_LINE('Value of x ------: ' || x); 
+		x := x - 1; 
+	end loop; 
+end; 
+/
+
+declare 
+    x integer := 10; 
+begin 
+    while x>0 loop 
+		DBMS_OUTPUT.PUT_LINE('Value of x : ' || x); 
+		x := x - 1; 
+	end loop; 
+end; 
+/
+
+declare 
+    x integer := 10; 
+begin 
+    while x>0 loop 
+		DBMS_OUTPUT.PUT_LINE('Value of x ------: ' || x); 
+		x := x - 1; 
+	end loop; 
+end; 
+/
+
+declare 
+    x integer := 10; 
+begin 
+    while x>0 loop 
+		DBMS_OUTPUT.PUT_LINE('Value of x ------: ' || x); 
+		x := x - 1; 
+	end loop; 
+end; 
+/
+
+DECLARE 
+	type names IS VARRAY(5) OF VARCHAR2(20); 
+	type marks IS VARRAY(5) OF INTEGER; 
+	student_name names; 
+	mark marks; 
+	total integer; 
+BEGIN 
+	student_name := names('Bala','Prabha','Siva','Priya','Ramya'); 
+	mark := marks(100,95,75,85,99); 
+	total := student_name.count; 
+	dbms_output.put_line('To number of student is :'|| total); 
+ 
+	FOR i in 1 .. total LOOP 
+        	dbms_output.put_line('Student Name : ' || student_name(i) || ' Mark :' || mark(i)); 
+	END LOOP; 
+END; 
+/
+
+DECLARE 
+	type names IS VARRAY(5) OF VARCHAR2(20); 
+	type marks IS VARRAY(5) OF INTEGER; 
+	student_name names; 
+	mark marks; 
+	total integer; 
+BEGIN 
+	student_name := names('Bala','Prabha','Siva','Priya','Ramya'); 
+	mark := marks(100,95,75,85,99); 
+	total := student_name.count; 
+	dbms_output.put_line('To number of student is :'|| total); 
+ 
+	FOR i in 1 .. total LOOP 
+        	dbms_output.put_line('Student Name : ' || student_name(i) || ' , Mark :' || mark(i)); 
+	END LOOP; 
+END; 
+/
+
+DECLARE 
+	type names IS VARRAY(5) OF VARCHAR2(20); 
+	type marks IS VARRAY(5) OF INTEGER; 
+	student_name names; 
+	mark marks; 
+	total integer; 
+BEGIN 
+	student_name := names('Bala','Prabha','Siva','Priya','Ramya'); 
+	mark := marks(100,95,75,85,99); 
+	total := student_name.count; 
+	dbms_output.put_line('To number of student is :'|| total); 
+ 
+	FOR i in 1 .. 5 LOOP 
+        	dbms_output.put_line('Student Name : ' || student_name(i) || ' , Mark :' || mark(i)); 
+	END LOOP; 
+END; 
+/
+
+DECLARE 
+	type names IS VARRAY(5) OF VARCHAR2(20); 
+	type marks IS VARRAY(5) OF INTEGER; 
+	student_name names; 
+	mark marks; 
+	total integer; 
+BEGIN 
+	student_name := names('Bala','Prabha','Siva','Priya','Ramya'); 
+	mark := marks(100,95,75,85,99); 
+	total := student_name.count; 
+	dbms_output.put_line('To number of student is :'|| total); 
+ 
+	FOR i in 1 .. total LOOP 
+        	dbms_output.put_line('Student Name : ' || student_name(i) || ' , Mark :' || mark(i)); 
+	END LOOP; 
+END; 
+/
+
+DECLARE 
+	type names IS VARRAY(5) OF VARCHAR2(20); 
+	type marks IS VARRAY(5) OF INTEGER; 
+	student_name names; 
+	mark marks; 
+	total integer; 
+BEGIN 
+	student_name := names('Bala','Prabha','Siva','Priya','Ramya'); 
+	mark := marks(100,95,75,85,99); 
+	total := student_name.count; 
+	dbms_output.put_line('To number of student is :'|| total \n\n); 
+ 
+	FOR i in 1 .. total LOOP 
+        	dbms_output.put_line('Student Name : ' || student_name(i) || ' , Mark :' || mark(i)); 
+	END LOOP; 
+END; 
+/
+
+DECLARE 
+	type names IS VARRAY(5) OF VARCHAR2(20); 
+	type marks IS VARRAY(5) OF INTEGER; 
+	student_name names; 
+	mark marks; 
+	total integer; 
+BEGIN 
+	student_name := names('Bala','Prabha','Siva','Priya','Ramya'); 
+	mark := marks(100,95,75,85,99); 
+	total := student_name.count; 
+	dbms_output.put_line('To number of student is :'|| total || char(10)); 
+ 
+	FOR i in 1 .. total LOOP 
+        	dbms_output.put_line('Student Name : ' || student_name(i) || ' , Mark :' || mark(i)); 
+	END LOOP; 
+END; 
+/
+
+DECLARE 
+	type names IS VARRAY(5) OF VARCHAR2(20); 
+	type marks IS VARRAY(5) OF INTEGER; 
+	student_name names; 
+	mark marks; 
+	total integer; 
+BEGIN 
+	student_name := names('Bala','Prabha','Siva','Priya','Ramya'); 
+	mark := marks(100,95,75,85,99); 
+	total := student_name.count; 
+	dbms_output.put_line('To number of student is :'|| total ||chr(10)); 
+ 
+	FOR i in 1 .. total LOOP 
+        	dbms_output.put_line('Student Name : ' || student_name(i) || ' , Mark :' || mark(i)); 
+	END LOOP; 
+END; 
+/
+
+DECLARE 
+	type names IS VARRAY(5) OF VARCHAR2(20); 
+	type marks IS VARRAY(5) OF INTEGER; 
+	student_name names; 
+	mark marks; 
+	total integer; 
+BEGIN 
+	student_name := names('Bala','Prabha','Siva','Priya','Ramya'); 
+	mark := marks(100,95,75,85,99); 
+	total := student_name.count; 
+	dbms_output.put_line('To number of student is :'|| chr(10) || total); 
+ 
+	FOR i in 1 .. total LOOP 
+        	dbms_output.put_line('Student Name : ' || student_name(i) || ' , Mark :' || mark(i)); 
+	END LOOP; 
+END; 
+/
+
+DECLARE 
+	type names IS VARRAY(5) OF VARCHAR2(20); 
+	type marks IS VARRAY(5) OF INTEGER; 
+	student_name names; 
+	mark marks; 
+	total integer; 
+BEGIN 
+	student_name := names('Bala','Prabha','Siva','Priya','Ramya'); 
+	mark := marks(100,95,75,85,99); 
+	total := student_name.count; 
+	dbms_output.put_line('To number of student is :'||  total); 
+ 
+	FOR i in 1 .. total LOOP 
+        	dbms_output.put_line('Student Name : ' || student_name(i) || chr(10)||' , Mark :' || mark(i)); 
+	END LOOP; 
+END; 
+/
+
+DECLARE 
+	type names IS VARRAY(5) OF VARCHAR2(20); 
+	type marks IS VARRAY(5) OF INTEGER; 
+	student_name names; 
+	mark marks; 
+	total integer; 
+BEGIN 
+	student_name := names('Bala','Prabha','Siva','Priya','Ramya'); 
+	mark := marks(100,95,75,85,99); 
+	total := student_name.count; 
+	dbms_output.put_line('To number of student is :'||  total); 
+ 
+	FOR i in 1 to total LOOP 
+        	dbms_output.put_line('Student Name : ' || student_name(i) || chr(10)||' , Mark :' || mark(i)); 
+	END LOOP; 
+END; 
+/
+
+DECLARE 
+	type names IS VARRAY(5) OF VARCHAR2(20); 
+	type marks IS VARRAY(5) OF INTEGER; 
+	student_name names; 
+	mark marks; 
+	total integer; 
+BEGIN 
+	student_name := names('Bala','Prabha','Siva','Priya','Ramya'); 
+	mark := marks(100,95,75,85,99); 
+	total := student_name.count; 
+	dbms_output.put_line('To number of student is :'||  total); 
+ 
+	FOR i in 1 .. total LOOP 
+        	dbms_output.put_line('Student Name : ' || student_name(i) || chr(10)||' , Mark :' || mark(i)); 
+	END LOOP; 
+END; 
+/
+
+CREATE OR REPLACE PROCEDURE callme 
+AS 
+BEGIN 
+	DBMS_OUTPUT.PUT_LINE('Welcome to PLSQL World!!!'); 
+END; 
+/
+
+CREATE OR REPLACE PROCEDURE callme 
+AS 
+BEGIN 
+	DBMS_OUTPUT.PUT_LINE('Welcome to PLSQL World!!!'); 
+END; 
+/
+
+EXECUTE callme
+
+
+EXECUTE callme
+
+
+EXECUTE callme
+
+
+BEGIN 
+	callme; 
+END; 
+/
+
+DECLARE 
+	x integer; 
+	y integer; 
+	z integer; 
+PROCEDURE findMax(a IN integer, b IN integer , c OUT integer ) 
+AS 
+BEGIN 
+	IF a > b THEN 
+    	c := a; 
+	ELSE 
+        c := b; 
+	END IF; 
+END; 
+BEGIN 
+	x := 100; 
+	y := 200; 
+	findMax(x,y,z); 
+	dbms_output.put_line('Max of '|| x || ' and ' ||y || 'is :' || z); 
+END; 
+/
+
+DECLARE 
+	x integer; 
+	y integer; 
+	z integer; 
+PROCEDURE findMax(a IN integer, b IN integer , c OUT integer ) 
+AS 
+BEGIN 
+	IF a > b THEN 
+    	c := a; 
+	ELSE 
+        c := b; 
+	END IF; 
+END; 
+BEGIN 
+	x := 100; 
+	y := 200; 
+	findMax(x,y,z); 
+	dbms_output.put_line('Max of '|| x || ' and ' ||y || ' is :' || z); 
+END; 
+/
+
+DECLARE 
+	x INTEGER; 
+	PROCEDURE squareNum(a IN OUT INTEGER)  
+	AS 
+	BEGIN 
+		a := a * a; 
+	END; 
+BEGIN 
+	x := 10; 
+	squareNum(x); 
+	dbms_output.put_line('SQUARE OF 10 IS :'|| x); 
+END; 
+/
+
+	/
+
+
+CREATE TABLE employee( 
+        emp_id  INTEGER, 
+        emp_name VARCHAR2(100), 
+        age INTEGER, 
+        salary INTEGER, 
+        city VARCHAR2(20) 
+);
+
+MySQL              Oracle 
+
+
+int               integer | number 
+
+
+varchar           varchar2 
+
+
+DECLARE 
+	-- variables must be declared here before usage 
+BEGIN 
+   -- Execute the logic queries/programs 
+END; 
+/
+
+DECLARE 
+	name varchar2(10) := 'ExcelR...';  
+	MySQL_duration number := 30; 
+BEGIN 
+    -- MySQL_duration := 28; 
+    dbms_output.put_line('The company name is: '|| name); 
+	DBMS_OUTPUT.PUT_LINE('My SQL training duration is : ' || MySQL_duration || ' hours.' ); 
+	dbms_output.put_line('i''m Santosh'); 
+END; 
+/
+
+DECLARE 
+	x integer := 10; 
+BEGIN 
+	IF(x<100) THEN 
+    	dbms_output.put_line('X is a small value : ' || x); 
+	ELSE 
+        dbms_output.put_line('X is not a small value : ' || x); 
+	END IF; 
+END; 
+/
+
+DECLARE 
+	x integer := -5; 
+BEGIN 
+	IF(x>=0 and x<10) THEN 
+    	dbms_output.put_line('X has a single digit value : ' || x); 
+	ELSIF(x>=10 and x<=99) THEN 
+        dbms_output.put_line('X has a two digit value : ' || x); 
+	ELSIF(x<0) THEN 
+		dbms_output.put_line('X is stored with negative value : ' || x); 
+	ELSE 
+        dbms_output.put_line('X has big value : ' || x); 
+	END IF; 
+END; 
+/
+
+DECLARE 
+	x integer := 95; 
+BEGIN 
+	IF(x BETWEEN 0 and 9) THEN 
+    	dbms_output.put_line('X has a single digit value : ' || x); 
+	ELSIF(x BETWEEN 10 and 99) THEN 
+        dbms_output.put_line('X has a two digit value : ' || x); 
+	ELSIF(x<0) THEN 
+		dbms_output.put_line('X is stored with negative value : ' || x); 
+	ELSE 
+        dbms_output.put_line('X has big value : ' || x); 
+	END IF; 
+END; 
+/
+
+DECLARE 
+	x integer := 0; 
+BEGIN 
+	LOOP 
+	    dbms_output.put_line(x); 
+		x := x + 1; 
+		IF x>10 THEN 
+            exit; 
+		END IF; 
+    END LOOP; 
+	dbms_output.put_line('THE VALUE OF X IS : '|| x); 
+END; 
+/
+
+DECLARE 
+	x integer := 10; 
+BEGIN 
+	WHILE x > 0 LOOP 
+    	dbms_output.put_line('Value of x: '||x); 
+		x := x - 1; 
+	END LOOP; 
+END; 
+/
+
+declare 
+    x integer := 10; 
+begin 
+    while x>0 loop 
+		DBMS_OUTPUT.PUT_LINE('Value of x ------: ' || x); 
+		x := x - 1; 
+	end loop; 
+end; 
+/
+
+DECLARE 
+	type names IS VARRAY(5) OF VARCHAR2(20); 
+	type marks IS VARRAY(5) OF INTEGER; 
+	student_name names; 
+	mark marks; 
+	total integer; 
+BEGIN 
+	student_name := names('Bala','Prabha','Siva','Priya','Ramya'); 
+	mark := marks(100,95,75,85,99); 
+	total := student_name.count; 
+	dbms_output.put_line('To number of student is :'||  total); 
+ 
+	FOR i in 1 .. total LOOP 
+        	dbms_output.put_line('Student Name : ' || student_name(i) || chr(10)||' , Mark :' || mark(i)); 
+	END LOOP; 
+END; 
+/
+
+CREATE OR REPLACE PROCEDURE callme 
+AS 
+BEGIN 
+	DBMS_OUTPUT.PUT_LINE('Welcome to PLSQL World!!!'); 
+END; 
+/
+
+EXECUTE callme
+
+
+BEGIN 
+	callme; 
+END; 
+/
+
+DECLARE 
+	x integer; 
+	y integer; 
+	z integer; 
+PROCEDURE findMax(a IN integer, b IN integer , c OUT integer ) 
+AS 
+BEGIN 
+	IF a > b THEN 
+    	c := a; 
+	ELSE 
+        c := b; 
+	END IF; 
+END; 
+BEGIN 
+	x := 100; 
+	y := 200; 
+	findMax(x,y,z); 
+	dbms_output.put_line('Max of '|| x || ' and ' ||y || ' is :' || z); 
+END; 
+/
+
+DECLARE 
+	x INTEGER; 
+	PROCEDURE squareNum(a IN OUT INTEGER)  
+	AS 
+	BEGIN 
+		a := a * a; 
+	END; 
+BEGIN 
+	x := 10; 
+	squareNum(x); 
+	dbms_output.put_line('SQUARE OF 10 IS :'|| x); 
+END; 
+/
+
+	/ 
+
+
+CREATE TABLE employee( 
+        emp_id  INTEGER, 
+        emp_name VARCHAR2(100), 
+        age INTEGER, 
+        salary INTEGER, 
+        city VARCHAR2(20) 
+);
+
+INERT INTO employee VALUES(1,'Satya',25,50000,'Bangalore'); 
+
+
+INERT INTO employee VALUES(1,'Satya',25,50000,'Bangalore'); 
+
+
+INERT INTO employee VALUES(1,'Satya',25,50000,'Bangalore'); 
+
+
+INERT INTO employee VALUES(1,'Satya',25,50000,'Bangalore'); 
+
+
+INSERT INTO employee VALUES(1,'Satya',25,50000,'Bangalore');
+
+INSERT INTO employee VALUES(2,'Raja',35,60000,'Chennai');
+
+INSERT INTO employee VALUES(3,'Anand',30,55000,'Hyderabad');
+
+INSERT INTO employee VALUES(4,'Siva',45,70000,'Pune');
+
+INSERT INTO employee VALUES(5,'Ramya',27,33000,'Gurgaon');
+
+SELECT * FROM employee;
+
+CREATE OR REPLACE FUNCTION get_emp_count 
+RETURN INTEGER IS 
+	total INTEGER; 
+BEGIN 
+	SELECT count(*) INTO total FROM employee; 
+	RETURN total; 
+END; 
+/
+
+DECLARE 
+   c INTEGER; 
+BEGIN 
+	c := get_emp_count(); 
+	DBMS_OUTPUT.PUT_LINE("Total number of employee : " || c); 
+END; 
+/
+
+DECLARE 
+   c INTEGER; 
+BEGIN 
+	c := get_emp_count(); 
+	DBMS_OUTPUT.PUT_LINE('Total number of employee : ' || c); 
+END; 
+/
+
+INSERT INTO employee VALUES(6,'Sakshi',31,43000,'Mumbai');
+
+DECLARE 
+   c INTEGER; 
+BEGIN 
+	c := get_emp_count(); 
+	DBMS_OUTPUT.PUT_LINE('Total number of employee : ' || c); 
+END; 
+/
+
+DECLARE 
+	a INTEGER; 
+	b INTEGER; 
+	c INTEGER; 
+	FUNCTION findMax(x IN INTEGER, y IN INTEGER) 
+	RETURN INTEGER IS 
+		z INTEGER; 
+	BEGIN 
+		IF x>y THEN 
+        	z := x; 
+		ELSE 
+            z := y; 
+		END IF; 
+ 
+		RETURN z; 
+	END; 
+	BEGIN 
+	a:=55; 
+	b:=66; 
+	c := findMax(a,b); 
+	DBMS_OUTPUT.PUT_LINE('Maximun of (55,66) is: ' || c); 
+	END; 
+/
+
+	/
+
+
+SELECT * FROM employee;
+
+CREATE OR REPLACE FUNCTION get_emp_name(c IN VARCHAR2(100)) 
+RETURN VARCHAR2(100) IS 
+	ename VARCHAR2(100); 
+BEGIN 
+	SELECT emp_name INTO ename FROM employee WHERE city=c; 
+	RETURN ename; 
+END; 
+/
+
+CREATE OR REPLACE FUNCTION get_emp_name(c IN VARCHAR2) 
+RETURN VARCHAR2(100) IS 
+	ename VARCHAR2(100); 
+BEGIN 
+	SELECT emp_name INTO ename FROM employee WHERE city=c; 
+	RETURN ename; 
+END; 
+/
+
+CREATE OR REPLACE FUNCTION get_emp_name(c IN VARCHAR2) 
+RETURN VARCHAR2 IS 
+	ename VARCHAR2(100); 
+BEGIN 
+	SELECT emp_name INTO ename FROM employee WHERE city=c; 
+	RETURN ename; 
+END; 
+/
+
+DECLARE 
+	place VARCHAR2(20); 
+	e_name VARCHAR2(100); 
+BEGIN 
+	place := 'Hyderabad'; 
+	e_name := get_emp_name(place); 
+	DBMS_OUTPUT.PUT_LINE('Employee Name working in '|| place ||' is : '|| e_name); 
+END; 
+/
+
+DECLARE 
+	place VARCHAR2(20); 
+	e_name VARCHAR2(100); 
+BEGIN 
+	place := 'Hyderabad'; 
+	e_name := get_emp_name(place); 
+	DBMS_OUTPUT.PUT_LINE('Employee Name working in city:  '|| place ||' is : '|| e_name); 
+END; 
+/
+
+DECLARE 
+	place VARCHAR2(20); 
+	e_name VARCHAR2(100); 
+BEGIN 
+	place := 'Pune'; 
+	e_name := get_emp_name(place); 
+	DBMS_OUTPUT.PUT_LINE('Employee Name working in city:  '|| place ||' is : '|| e_name); 
+END; 
+/
+
